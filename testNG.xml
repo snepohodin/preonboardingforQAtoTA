@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Parallel test suite" parallel="classes" thread-count="3" >
+        <test name="Three tests in parallel + FireFox browser" >
+            <parameter name="browserName" value="firefox"/>
+            <classes>
+                <class name="test.ParallelTestOne" />
+                <class name="test.ParallelTestTwo" />
+                <class name="test.ParallelTestThree" />
+            </classes>
+        </test>
+</suite>
